@@ -52,13 +52,12 @@ WARNING!!! WARNING!!!
   // 'j'. If the same, call byeSpeaker's 'speak' method with the current name
   // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
   // name in the loop.
-  for (var name in names) {
-    var lowerCaseName = name.toLowerCase();
-    var firstLetter = name.charAt(0);
+  for (var i = 0 ; i < names.length ; i++) {
+    var firstLetter = names[i].charAt(0).toLowerCase();
     if (firstLetter == 'j') {
-      byeSpeaker.speak(name);
+      byeSpeaker.speak(names[i]);
     } else {
-      helloSpeaker.speak(name);
+      helloSpeaker.speak(names[i]);
     }
   }
 })();
